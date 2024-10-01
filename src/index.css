@@ -1,13 +1,126 @@
+
 body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  text-align: center;
+  color: #444;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.Calc {
+  background-color: #2c3e50;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.display {
+  background-color: #34495e;
+  color: #ecf0f1;
+  font-size: 2.2rem;
+  text-align: right;
+  padding: 15px;
+  border-radius: 8px;
+  min-height: 80px;
+  margin-bottom: 15px;
+  box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+}
+
+.Buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.key {
+  background-color: #34495e;
+  color: #ecf0f1;
+  font-size: 1.4rem;
+  padding: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.key:hover {
+  background-color: #3a536f;
+}
+
+.key:active {
+  transform: scale(0.98);
+  background-color: #2c3e50;
+}
+
+/* Operator button styling */
+.key:nth-child(4n) {
+  background-color: #e67e22;
+}
+
+.key:nth-child(4n):hover {
+  background-color: #d35400;
+}
+
+.key:nth-child(4n):active {
+  background-color: #e67e22;
+}
+
+.key:nth-child(12), .key:nth-child(16) {
+  background-color: #e74c3c;
+}
+
+.key:nth-child(12):hover, .key:nth-child(16):hover {
+  background-color: #c0392b;
+}
+
+.key:nth-child(12):active, .key:nth-child(16):active {
+  background-color: #e74c3c;
+}
+
+.key:nth-child(13) {
+  grid-column: span 2;
+  background-color: #2ecc71;
+}
+
+.key:nth-child(13):hover {
+  background-color: #27ae60;
+}
+
+.key:nth-child(13):active {
+  background-color: #2ecc71;
+}
+
+.key:last-child {
+  background-color: #3498db;
+  font-weight: bold;
+}
+
+.key:last-child:hover {
+  background-color: #2980b9;
+}
+
+.key:last-child:active {
+  background-color: #3498db;
 }
